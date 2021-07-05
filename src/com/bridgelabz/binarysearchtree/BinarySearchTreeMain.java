@@ -9,6 +9,7 @@ public class BinarySearchTreeMain
 		BST1.insert(56);
 		BST1.insert(30);
 		BST1.insert(70);
+		System.out.println("The number of nodes are "+BST1.size());
 		
 //		uc2 - create a binary tree as shown in figure
 		BinarySearchTreeService BST2 = new BinarySearchTreeService();
@@ -24,6 +25,7 @@ public class BinarySearchTreeMain
 		BST2.insert(60);
 		BST2.insert(65);
 		BST2.insert(63);
-		BST2.insert(67);
+		BST2.insert(67);		
+		System.out.println("The number of nodes are "+BST2.size());
 	}
 }
