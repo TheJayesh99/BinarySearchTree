@@ -39,19 +39,50 @@ public class BinarySearchTreeService
 		}
 
 	}
-	
+
 	// calculate the size of binary tree
 	public int size()
-    {
-        return size(root);
-    }
-    
+	{
+		return size(root);
+	}
+
 	private int size(BinaryNode traverse)
-    {
-        if (traverse == null)
-            return 0;
-        else
-            return(size(traverse.left) + 1 + size(traverse.right));
-    }
+	{
+		if (traverse == null)
+			return 0;
+		else
+			return(size(traverse.left) + 1 + size(traverse.right));
+	}
+
+	//method to search data in binary search tree
+	public void search(int data) 
+	{
+		BinaryNode traverse = root;
+		while(true)
+		{	
+			
+			if(traverse == null)
+			{
+				System.out.println(data+ " is not present in tree");
+				break;
+			}
+			else if(traverse.data == data  )
+			{
+				System.out.println(data+ " is present in tree");
+				break;
+			}
+			else if(traverse.data < data)
+			{					
+
+				traverse = traverse.right;
+			}
+			else
+			{
+
+				traverse = traverse.left;
+			}
+		}
+
+	}
 }
 

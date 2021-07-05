@@ -4,14 +4,14 @@ public class BinarySearchTreeMain
 {
 	public static void main(String[] args)
 	{
-//		uc1 - create binary search tree
+		//uc1 - create binary search tree
 		BinarySearchTreeService BST1 = new BinarySearchTreeService();
 		BST1.insert(56);
 		BST1.insert(30);
 		BST1.insert(70);
 		System.out.println("The number of nodes are "+BST1.size());
-		
-//		uc2 - create a binary tree as shown in figure
+
+		//uc2 - create a binary tree as shown in figure
 		BinarySearchTreeService BST2 = new BinarySearchTreeService();
 		BST2.insert(56);
 		BST2.insert(30);
@@ -27,5 +27,8 @@ public class BinarySearchTreeMain
 		BST2.insert(63);
 		BST2.insert(67);		
 		System.out.println("The number of nodes are "+BST2.size());
+		
+		//uc3 - to search data 63 present in binary search tree or not
+		BST2.search(63);
 	}
 }
