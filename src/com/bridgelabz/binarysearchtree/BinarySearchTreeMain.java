@@ -5,14 +5,14 @@ public class BinarySearchTreeMain
 	public static void main(String[] args)
 	{
 		//uc1 - create binary search tree
-		BinarySearchTreeService BST1 = new BinarySearchTreeService();
+		BinarySearchTreeService<Integer> BST1 = new BinarySearchTreeService<Integer>();
 		BST1.insert(56);
 		BST1.insert(30);
 		BST1.insert(70);
 		System.out.println("The number of nodes are "+BST1.size());
 
 		//uc2 - create a binary tree as shown in figure
-		BinarySearchTreeService BST2 = new BinarySearchTreeService();
+		BinarySearchTreeService<Integer> BST2 = new BinarySearchTreeService<Integer>();
 		BST2.insert(56);
 		BST2.insert(30);
 		BST2.insert(22);

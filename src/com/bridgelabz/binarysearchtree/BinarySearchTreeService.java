@@ -1,16 +1,16 @@
 package com.bridgelabz.binarysearchtree;
 
-public class BinarySearchTreeService
+public class BinarySearchTreeService <T extends Comparable<T>>
 {
-	BinaryNode root;
+	BinaryNode<T> root;
 
-	public void insert(int data) 
+	public void insert(T data) 
 	{
-		BinaryNode newNode = new BinaryNode();
+		BinaryNode<T> newNode = new BinaryNode<>();
 		newNode.data = data;
 		newNode.left = null;
 		newNode.right =null;
-		BinaryNode traverse = root;
+		BinaryNode<T> traverse = root;
 		while(true)
 		{			
 			if(traverse == null)
@@ -18,7 +18,7 @@ public class BinarySearchTreeService
 				root = newNode;
 				break;
 			}
-			else if(traverse.data < newNode.data)
+			else if(traverse.data.compareTo(newNode.data) < 0)
 			{
 				if(traverse.right == null)
 				{					
@@ -46,7 +46,7 @@ public class BinarySearchTreeService
 		return size(root);
 	}
 
-	private int size(BinaryNode traverse)
+	private int size(BinaryNode<T> traverse)
 	{
 		if (traverse == null)
 			return 0;
@@ -55,9 +55,9 @@ public class BinarySearchTreeService
 	}
 
 	//method to search data in binary search tree
-	public void search(int data) 
+	public void search(T data) 
 	{
-		BinaryNode traverse = root;
+		BinaryNode<T> traverse = root;
 		while(true)
 		{	
 			
@@ -71,7 +71,7 @@ public class BinarySearchTreeService
 				System.out.println(data+ " is present in tree");
 				break;
 			}
-			else if(traverse.data < data)
+			else if(traverse.data.compareTo(data) < 0 )
 			{					
 
 				traverse = traverse.right;

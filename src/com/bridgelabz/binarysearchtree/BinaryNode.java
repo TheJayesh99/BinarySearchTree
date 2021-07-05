@@ -1,10 +1,10 @@
 package com.bridgelabz.binarysearchtree;
 
-public class BinaryNode 
+public class BinaryNode <T extends Comparable<T>>
 {
-	int data;
-	BinaryNode right;
-	BinaryNode left;
+	T data;
+	BinaryNode<T> right;
+	BinaryNode<T> left;
 	public BinaryNode()
 	{
 		super();
